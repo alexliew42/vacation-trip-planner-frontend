@@ -1,4 +1,8 @@
 /* Add a black background color to the top navigation */
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 .topnav {
   background-color: white;
   overflow: hidden;
