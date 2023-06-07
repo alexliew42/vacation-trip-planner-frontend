@@ -7,6 +7,7 @@ import {IndexPlaces} from "./IndexPlaces.jsx"
 import {useState, useEffect} from "react"
 import axios from "axios"
 
+
 export function Content() {
 
   const [trips, setTrips] = useState([]);
@@ -27,6 +28,7 @@ export function Content() {
       successCallback();
     })
   }
+
 
   useEffect(handleIndexTrips, []);
 

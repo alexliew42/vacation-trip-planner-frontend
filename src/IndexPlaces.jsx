@@ -2,18 +2,29 @@
 import {useEffect, useState} from "react"
 import axios from "axios"
 import { useSearchParams } from "react-router-dom"
+import {CreatePlaces} from "./CreatePlaces.jsx"
+
 
 export function IndexPlaces (props) {
 
   const [places, setPlaces] = useState([]);
 
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   console.log(searchParams.get("trip_id"))
   
   const handleIndexPlaces = () => { 
     axios.get(`http://localhost:3000/places.json?trip_id=${searchParams.get("trip_id")}`).then((response) => {
       console.log(response.data)
       setPlaces(response.data)
+    })
+  }
+
+  const handleCreatePlace = (params, successCallback) => {
+    console.log("I am creating trip")
+    console.log(params)
+    axios.post("http://localhost:3000/places.json", params).then((response) => {
+      setPlaces([...places, response.data]);
+      successCallback();
     })
   }
 
@@ -33,6 +44,7 @@ export function IndexPlaces (props) {
           <p>{place.end_time}</p>
         </div>
       ))}
+      <CreatePlaces onCreatePlace={handleCreatePlace}/>
     </div>
   )
 }
