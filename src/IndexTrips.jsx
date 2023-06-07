@@ -3,11 +3,10 @@
 export function IndexTrips (props) {
 
 
-  const handleClick = (event) => {
-    event.preventDefault()
-    console.log(event.target)
-    props.onCurrentTrip(event.target)
-    window.location.href = "/places"
+  const handleClick = (tripId) => {
+    // const tripId = event.target.textContent
+    // console.log(event.target)
+    window.location.href = `/places?trip_id=${tripId}`
   }
 
   return (
@@ -19,8 +18,7 @@ export function IndexTrips (props) {
           <h2>{trip.user_id}</h2>
           <p>{trip.start_time}</p>
           <p>{trip.end_time}</p>
-          <button onClick={handleClick}>
-            {trip.id}
+          <button onClick={() => {handleClick(trip.id)}}> Places
           </button>
         </div>
       ))};

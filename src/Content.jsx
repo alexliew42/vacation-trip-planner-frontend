@@ -10,8 +10,6 @@ import axios from "axios"
 export function Content() {
 
   const [trips, setTrips] = useState([]);
-  const [places, setPlaces] = useState([]);
-  const [currentTrip, setCurrentTrip] = useState({});
 
   const handleIndexTrips = () => {
     console.log("I am in handleindextrips")
@@ -30,22 +28,7 @@ export function Content() {
     })
   }
 
-  
-  const handleIndexPlaces = () => { 
-    console.log(currentTrip)
-    axios.get(`http://localhost:3000/places.json?trip_id=${currentTrip}`).then((response) => {
-      console.log(response.data)
-      setPlaces(response.data)
-    })
-  }
-
-  const handleCurrentPlace = (trip) => {
-    setCurrentTrip(trip)
-    console.log(trip)
-  }
-
   useEffect(handleIndexTrips, []);
-  useEffect(handleIndexPlaces, []);
 
 
   return (
@@ -53,9 +36,9 @@ export function Content() {
       <Routes>
         <Route path="/signup" element={<Signup/>} />
         <Route path="/login" element={<Login/>} />
-        <Route path="/trips" element={<IndexTrips trips={trips} onCurrentTrip={handleCurrentPlace}/>}/>
+        <Route path="/trips" element={<IndexTrips trips={trips} />}/>
         <Route path="/tripsnew" element={<CreateTrips onCreateTrip={handleCreateTrip}/>} />
-        <Route path="/places" element={<IndexPlaces places={places}/>}/>
+        <Route path="/places" element={<IndexPlaces/>}/>
       </Routes>
     </div>
   );
