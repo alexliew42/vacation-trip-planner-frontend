@@ -10,13 +10,13 @@ export function CreatePlaces(props) {
   return (
     <div>
       <h1>New Place</h1>
-      {console.log(props)}
+      {console.log(props.places)}
       <form onSubmit={handleSubmit}>
         <div>
           Name: <input name="name" type="text" />
         </div>
         <div>
-          TripId: <input name="trip_id" type="integer" />
+          TripId: <input name="trip_id" type="integer" defaultValue={props.places}/>
         </div>
         <div>
           Address: <input name="address" type="text" />

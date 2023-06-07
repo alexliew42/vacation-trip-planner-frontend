@@ -10,8 +10,7 @@ export function IndexPlaces (props) {
   const [places, setPlaces] = useState([]);
 
   const [searchParams] = useSearchParams();
-  console.log(searchParams.get("trip_id"))
-  
+
   const handleIndexPlaces = () => { 
     axios.get(`http://localhost:3000/places.json?trip_id=${searchParams.get("trip_id")}`).then((response) => {
       console.log(response.data)
@@ -44,7 +43,7 @@ export function IndexPlaces (props) {
           <p>{place.end_time}</p>
         </div>
       ))}
-      <CreatePlaces onCreatePlace={handleCreatePlace}/>
+      <CreatePlaces onCreatePlace={handleCreatePlace} places={searchParams.get("trip_id")}/>
     </div>
   )
 }
