@@ -1,17 +1,20 @@
 /* eslint-disable react/prop-types */
+import {Calendar} from "react-calendar"
+import {useState} from "react"
 
 export function IndexTrips (props) {
 
 
   const handleClick = (tripId) => {
-    // const tripId = event.target.textContent
-    // console.log(event.target)
     window.location.href = `/places?trip_id=${tripId}`
   }
+
+  const [value, onChange] = useState(new Date());
 
   return (
     <div>
       <h1>All of your trips</h1>
+      {console.log(value)}
       {props.trips.map((trip)=> (
         <div key={trip.id} >
           <h1>{trip.title}</h1>
@@ -22,6 +25,7 @@ export function IndexTrips (props) {
           </button>
         </div>
       ))};
+      <Calendar onChange={onChange} value={value}/>
     </div>
   )
 }
