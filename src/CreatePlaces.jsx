@@ -28,10 +28,10 @@ export function CreatePlaces(props) {
           description: <input name="description" type="text" />
         </div>
         <div>
-          start_time: <input name="start_time" type="text" />
+          start_time: <input name="start_time" type="date" />
         </div>
         <div>
-          end_time: <input name="end_time" type="text" />
+          end_time: <input name="end_time" type="date" />
         </div>
         <button type="submit">Create Place</button>
       </form>

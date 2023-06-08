@@ -34,12 +34,12 @@ export function Content() {
 
 
   return (
-    <div>
+    <div className="content">
       <Routes>
         <Route path="/signup" element={<Signup/>} />
         <Route path="/login" element={<Login/>} />
         <Route path="/trips" element={<IndexTrips trips={trips} />}/>
-        <Route path="/tripsnew" element={<CreateTrips onCreateTrip={handleCreateTrip}/>} />
+        <Route path="/" element={<CreateTrips onCreateTrip={handleCreateTrip}/>} />
         <Route path="/places" element={<IndexPlaces/>}/>
       </Routes>
     </div>

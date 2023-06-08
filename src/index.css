@@ -7,6 +7,7 @@ body {
   background-color: white;
   overflow: hidden;
   border-radius: 4px;
+  padding-bottom: 20px;
 }
 
 /* Style the links inside the navigation bar */
@@ -47,4 +48,104 @@ body {
 
 .right {
   margin-right: 60%;
+}
+
+.content {
+  text-align: center;
+}
+
+/* Signup CSS */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+.wrapper {
+  position: relative;
+  max-width: 430px;
+  width: 100%;
+  background: #fff;
+  padding-bottom: 34px;
+  border-radius: 6px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  margin: auto;
+}
+
+.wrapper h2 {
+  position: relative;
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+  padding-left: 30px;
+  text-align: left;
+}
+
+.wrapper h2::before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  bottom: 0;
+  height: 3px;
+  width: 28px;
+  border-radius: 12px;
+  background: #3DE397;
+}
+
+.wrapper form {
+  margin-top: 30px;
+}
+
+.wrapper form .input-box {
+  height: 52px;
+  margin: 18px 20px;
+}
+
+form .input-box input {
+  height: 100%;
+  width: 85%;
+  outline: none;
+  font-size: 15px;
+  font-weight: 400;
+  color: #333;
+  border: 1.5px solid #e2e2e2;
+  border-bottom-width: 2.5px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+
+.input-box.button input {
+  color: #fff;
+  letter-spacing: 1px;
+  border: none;
+  background: #3DE397;
+  cursor: pointer;
+}
+
+.input-box.button input:hover {
+  background: #3DE397;
+}
+
+form .text h3 {
+  color: #333;
+  width: 100%;
+  text-align: center;
+}
+
+form .text h3 a {
+  color: #3DE397;
+  text-decoration: none;
+}
+
+form .text h3 a:hover {
+  text-decoration: underline;
+}
+
+.input-box {
+  margin-left: auto;
+}
+
+#beach-image {
+  float: top;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px 6px 0px 0px;
 }
