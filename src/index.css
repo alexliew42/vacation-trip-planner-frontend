@@ -43,7 +43,8 @@ body {
   height: 40px;
   background-color: #D7CEC7;
   color: white;
-  text-align: center;
+  text-align: bottom;
+  float: bottom;
 }
 
 .right {

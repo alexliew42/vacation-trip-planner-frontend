@@ -3,6 +3,7 @@ import {useEffect, useState} from "react"
 import axios from "axios"
 import { useSearchParams } from "react-router-dom"
 import {CreatePlaces} from "./CreatePlaces.jsx"
+import { Map, Marker } from "pigeon-maps"
 
 
 export function IndexPlaces (props) {
@@ -43,6 +44,9 @@ export function IndexPlaces (props) {
           <p>{place.end_time}</p>
         </div>
       ))}
+      <Map height={300} defaultCenter={[50.879, 4.6997]} defaultZoom={11}>
+        <Marker width={50} anchor={[50.879, 4.6997]} />
+      </Map>
       <CreatePlaces onCreatePlace={handleCreatePlace} places={searchParams.get("trip_id")}/>
     </div>
   )
