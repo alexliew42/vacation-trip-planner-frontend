@@ -7,3 +7,24 @@
   display: inline-block;
   margin-left: 20px;
 }
+
+.card-body {
+  text-align: left;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(239, 232, 180);
+}
+
+.card-title {
+  font-size: 30px;
+}
+
+.card-button {
+  border-radius: 2px;
+  border: none;
+  background: #3DE397;
+  padding: 20px;
+}
+
+.add-a-trip {
+  color: #04AA6D;
+}
