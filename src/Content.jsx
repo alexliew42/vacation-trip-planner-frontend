@@ -39,7 +39,7 @@ export function Content() {
         <Route path="/login" element={<Login/>} />
         <Route path="/logout" element={<LogoutLink/>}/>
         <Route path="/trips" element={<IndexTrips trips={trips} />}/>
-        <Route path="/tripsnew" element={<CreateTrips onCreateTrip={handleCreateTrip}/>} />
+        <Route path="/tripsnew" element={<CreateTrips onCreateTrip={handleCreateTrip} trips={trips}/>} />
         <Route path="/places" element={<IndexPlaces/>}/>
       </Routes>
     </div>

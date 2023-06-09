@@ -7,6 +7,14 @@ export function CreateTrips(props) {
     event.preventDefault()
     const params = new FormData(event.target);
     props.onCreateTrip(params, () => event.target.reset())
+    window.location.href = "/trips"
+  }
+
+  let user;
+  if (props.trips[0] === undefined) {
+    user = 1;
+  } else {
+    user = props.trips[0].user_id
   }
 
   return (
@@ -18,7 +26,7 @@ export function CreateTrips(props) {
         </div>
         <br/>
         <div>
-          User ID: <input name="user_id" type="integer" defaultValue="1"/>
+          User ID: <input name="user_id" type="integer" defaultValue={user} />
         </div>
         <br/>
         <div>
