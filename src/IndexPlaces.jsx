@@ -4,6 +4,7 @@ import axios from "axios"
 import { useSearchParams } from "react-router-dom"
 import {CreatePlaces} from "./CreatePlaces.jsx"
 import { Map, Marker } from "pigeon-maps"
+import "./IndexPlaces.css"
 
 
 export function IndexPlaces (props) {
@@ -42,11 +43,15 @@ export function IndexPlaces (props) {
           <p>{place.description}</p>
           <p>{place.start_time}</p>
           <p>{place.end_time}</p>
+          <p>{place.lat}</p>
+          <p>{place.long}</p>
+          <div className="map">
+            <Map height={300} defaultCenter={[place.lat, place.long]} defaultZoom={11}>
+              <Marker width={50} anchor={[place.lat, place.long]} />
+            </Map>
+          </div>
         </div>
       ))}
-      <Map height={300} defaultCenter={[50.879, 4.6997]} defaultZoom={11}>
-        <Marker width={50} anchor={[50.879, 4.6997]} />
-      </Map>
       <CreatePlaces onCreatePlace={handleCreatePlace} places={searchParams.get("trip_id")}/>
     </div>
   )

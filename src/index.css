@@ -3,54 +3,21 @@ body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.topnav {
-  background-color: white;
-  overflow: hidden;
-  border-radius: 4px;
-  padding-bottom: 20px;
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
-  float: left;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  margin: auto, 0;
-}
-
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Add a color to the active/current link */
-.topnav a.active {
-  background-color: #04AA6D;
-  color: white;
-
-}
-
-.footer {
+.footers {
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   height: 40px;
-  background-color: #D7CEC7;
+  background-color: #3E363F;
   color: white;
   text-align: bottom;
   float: bottom;
-}
-
-.right {
-  margin-right: 60%;
+  padding-left: 160px;
 }
 
 .content {
   text-align: center;
+  padding-top: 20px;
+  margin-left: 200px;
 }

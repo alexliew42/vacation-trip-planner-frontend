@@ -1,6 +1,7 @@
 import {Routes, Route} from "react-router-dom"
 import {Signup} from "./Signup.jsx"
 import {Login} from "./Login.jsx"
+import {LogoutLink} from "./LogoutLink.jsx"
 import {IndexTrips} from "./IndexTrips.jsx"
 import {CreateTrips} from "./CreateTrips.jsx"
 import {IndexPlaces} from "./IndexPlaces.jsx"
@@ -29,17 +30,16 @@ export function Content() {
     })
   }
 
-
   useEffect(handleIndexTrips, []);
-
 
   return (
     <div className="content">
       <Routes>
         <Route path="/signup" element={<Signup/>} />
         <Route path="/login" element={<Login/>} />
+        <Route path="/logout" element={<LogoutLink/>}/>
         <Route path="/trips" element={<IndexTrips trips={trips} />}/>
-        <Route path="/" element={<CreateTrips onCreateTrip={handleCreateTrip}/>} />
+        <Route path="/tripsnew" element={<CreateTrips onCreateTrip={handleCreateTrip}/>} />
         <Route path="/places" element={<IndexPlaces/>}/>
       </Routes>
     </div>
