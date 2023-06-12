@@ -12,7 +12,7 @@
 .sidebar a {
   display: block;
   color: black;
-  padding: 16px;
+  padding-bottom: 16px;
   text-decoration: none;
 }
 
@@ -30,12 +30,12 @@
 
 .sidebar-content {
   margin-top: 695px;
+  text-align: center;
 }
 
 .logo-image {
   background-image: url("./assets/travelcity-website-favicon-black.svg");
   padding-bottom: 200px;
-  overflow: hidden;
   min-height: 123px;
 }
 

@@ -12,7 +12,7 @@
 
 .image-side {
   float: left;
-  width: 60%
+  width: 60%;
 }
 
 .login-side {
@@ -25,6 +25,7 @@
   border-radius: 6px 0px 0px 6px;
   height: 500px;
   width: 100%;
+  background-image: url("./assets/aurora3.jpeg");
 }
 
 .inputs input {

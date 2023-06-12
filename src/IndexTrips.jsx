@@ -10,8 +10,8 @@ export function IndexTrips (props) {
   } else {
     authentication =  <div>
     <h1>Your Trips</h1>
-    <h2><a className="add-a-trip" href="/tripsnew">Plan a Trip</a></h2>
     <hr className="line-break"/>
+    <h2><a className="add-a-trip" href="/tripsnew">Plan a Trip</a></h2>
       {props.trips.map((trip)=> (
       <div key={trip.id} className="cards">
         <div className="card">
