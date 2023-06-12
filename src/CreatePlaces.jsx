@@ -24,7 +24,7 @@ export function CreatePlaces(props) {
           Address: <input name="address" type="text" />
         </div>
         <div>
-          image_url: <input name="image_url" type="text" />
+          Image URL: <input name="image_url" type="text" />            
         </div>
         <div>
           description: <input name="description" type="text" />

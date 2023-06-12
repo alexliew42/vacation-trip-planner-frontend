@@ -30,8 +30,9 @@
 }
 
 .sidebar-content {
-  margin-top: 695px;
   text-align: center;
+  margin-top: auto;
+  padding: 20px;
 }
 
 .logo-image {

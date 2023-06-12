@@ -46,8 +46,6 @@ export function IndexPlaces () {
                   <p>Description: {place.description}</p>
                   <p>Start Time: {place.start_time.slice(0, 10)}</p>
                   <p>End Time: {place.end_time.slice(0, 10)}</p>
-                  <p>{place.lat}</p>
-                  <p>{place.long}</p>
                 </div>
               </div>
               <div className="map">
