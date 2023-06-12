@@ -1,6 +1,6 @@
 import { Content } from "./Content"
 import { Footer } from "./Footer"
-import { Header } from "./Header"
+import { SideBar } from "./SideBar"
 import {BrowserRouter} from "react-router-dom"
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
   return(
     <div>
       <BrowserRouter>
-        <Header/>
+        <SideBar/>
         <Content/>
         <Footer/>
       </BrowserRouter>

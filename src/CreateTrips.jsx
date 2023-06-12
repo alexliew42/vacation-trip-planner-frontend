@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-
+import "./CreateTrips.css"
 
 export function CreateTrips(props) {
   
@@ -19,26 +19,31 @@ export function CreateTrips(props) {
 
   return (
     <div>
-      <h1>Build Your Customized Trip Plan</h1>
+      <h1><b>Plan a New Trip</b></h1>
       <form onSubmit={handleSubmit}>
+        <label className="trips-label">Where to?</label>
         <div>
-          Trip name: <input name="title" type="text"/>
+          <input className="trips-input-box" name="title" type="text" placeholder="Enter a Destination: e.g Paris, Miami"/>
         </div>
         <br/>
+        <label className="trips-label">User ID</label>
         <div>
-          User ID: <input name="user_id" type="integer" defaultValue={user} />
+          <input className="trips-input-box" name="user_id" type="integer" defaultValue={user} />
         </div>
         <br/>
+        <label className="trips-label">Start Time</label>
         <div>
-          Start Time: <input name="start_time" type="date"/>
+          <input className="trips-input-box" name="start_time" type="date"/>
         </div>
         <br/>
+        <label className="trips-label">End Time</label>
         <div>
-          End Time: <input name="end_time" type="date"/>
+          <input className="trips-input-box" name="end_time" type="date"/>
         </div>
         <br/>
+        <label className="trips-label">Image URL </label>
         <div>
-          Image URL: <input name="image_url" type="text"/>
+          <input className="trips-input-box" name="image_url" type="text"/>
         </div>
         <input type="submit"/>
       </form>

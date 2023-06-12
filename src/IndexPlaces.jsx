@@ -36,20 +36,26 @@ export function IndexPlaces (props) {
       {console.log(props)}
       <h1>All places</h1>
       {places.map((place) => (
-        <div key={place.id}>
-          <p>{place.name}</p>
-          <img src={place.image_url} />
-          <p>{place.address}</p>
-          <p>{place.description}</p>
-          <p>{place.start_time}</p>
-          <p>{place.end_time}</p>
-          <p>{place.lat}</p>
-          <p>{place.long}</p>
-          <div className="map">
-            <Map height={300} defaultCenter={[place.lat, place.long]} defaultZoom={11}>
-              <Marker width={50} anchor={[place.lat, place.long]} />
-            </Map>
-          </div>
+        <div key={place.id} className="places">
+            <div className="place-cards">
+              <div className="place-image-text">
+                <img className="place-images"src={place.image_url} />
+                <div className="place-text">
+                  <p>Name: {place.name}</p>
+                  <p>Address: {place.address}</p>
+                  <p>Description: {place.description}</p>
+                  <p>Start Time: {place.start_time.slice(0, 10)}</p>
+                  <p>End Time: {place.end_time.slice(0, 10)}</p>
+                  <p>{place.lat}</p>
+                  <p>{place.long}</p>
+                </div>
+              </div>
+              <div className="map">
+                <Map defaultCenter={[place.lat, place.long]} defaultZoom={11}>
+                  <Marker anchor={[place.lat, place.long]} />
+                </Map>
+            </div>
+            </div>
         </div>
       ))}
       <CreatePlaces onCreatePlace={handleCreatePlace} places={searchParams.get("trip_id")}/>

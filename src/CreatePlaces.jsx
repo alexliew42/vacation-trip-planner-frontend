@@ -1,4 +1,6 @@
 /* eslint-disable react/prop-types */
+import "./CreatePlaces.css"
+
 export function CreatePlaces(props) {
   
   const handleSubmit = (event) => {

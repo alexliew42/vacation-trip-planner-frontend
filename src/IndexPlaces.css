@@ -1,3 +1,26 @@
 .map {
-  padding: 100px;
+  float: right;
+  width: 50%;
+  height: 500px;
+  min-height: 500px;
+  overflow: hidden;
+  padding-bottom: 20px;
+}
+
+.places {
+  width: 30rem;
+  display: inline-block;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.place-image-text {
+  float: left;
+  width: 50%;
+  min-width: 50%;
+  overflow: hidden;
+}
+
+.place-cards {
+  padding: 20px;
 }

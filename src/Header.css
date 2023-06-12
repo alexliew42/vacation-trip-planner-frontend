@@ -1,7 +1,7 @@
 .sidebar {
   margin: 0;
   padding: 0;
-  width: 200px;
+  width: 123px;
   background-color: #f1f1f1;
   position: fixed;
   height: 100%;
@@ -26,6 +26,21 @@
 .sidebar a:hover:not(.active) {
   background-color: #555;
   color: white;
+}
+
+.sidebar-content {
+  margin-top: 695px;
+}
+
+.logo-image {
+  background-image: url("./assets/travelcity-website-favicon-black.svg");
+  padding-bottom: 200px;
+  overflow: hidden;
+  min-height: 123px;
+}
+
+.logo-background {
+  background-color: #04AA6D;
 }
 
 
