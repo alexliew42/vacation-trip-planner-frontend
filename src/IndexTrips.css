@@ -20,9 +20,9 @@
 
 .card-button {
   border-radius: 2px;
-  border: none;
+  border: 1.5px solid black;
   background: #3DE397;
-  padding: 20px;
+  padding: 15px;
 }
 
 .add-a-trip {

@@ -5,6 +5,7 @@ import { useSearchParams } from "react-router-dom"
 import {CreatePlaces} from "./CreatePlaces.jsx"
 import { Map, Marker } from "pigeon-maps"
 import "./IndexPlaces.css"
+import {Modal} from "./Modal.jsx"
 
 
 export function IndexPlaces () {
@@ -12,6 +13,15 @@ export function IndexPlaces () {
   const [places, setPlaces] = useState([]);
 
   const [searchParams] = useSearchParams();
+
+  const [isPlacesCreateVisible, setIsPlacesCreateVisible] = useState(false);
+
+  const handleShowCreatePlace = () => {
+    setIsPlacesCreateVisible(true)
+  }
+  const handleClose = () => {
+    setIsPlacesCreateVisible(false)
+  }
 
   const handleIndexPlaces = () => { 
     axios.get(`http://localhost:3000/places.json?trip_id=${searchParams.get("trip_id")}`).then((response) => {
@@ -27,6 +37,7 @@ export function IndexPlaces () {
       setPlaces([...places, response.data]);
       successCallback();
     })
+    setIsPlacesCreateVisible(false);
   }
 
   useEffect(handleIndexPlaces, [])
@@ -34,6 +45,9 @@ export function IndexPlaces () {
   return (
     <div className="IndexPlaces">
       <h1>All places</h1>
+      <button onClick={handleShowCreatePlace}>
+        Add a new Place
+      </button>
       <br/>
       {places.map((place) => (
         <div key={place.id} className="places">
@@ -56,7 +70,10 @@ export function IndexPlaces () {
             </div>
         </div>
       ))}
-      <CreatePlaces onCreatePlace={handleCreatePlace} places={searchParams.get("trip_id")}/>
+      <Modal show={isPlacesCreateVisible} onClose={handleClose}>
+        <CreatePlaces onCreatePlace={handleCreatePlace} places={searchParams.get("trip_id")}/>
+      </Modal>
+    
     </div>
   )
 }
