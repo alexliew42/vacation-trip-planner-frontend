@@ -2,10 +2,11 @@
   margin: 0;
   padding: 0;
   width: 123px;
-  background-color: #f1f1f1;
+  background-color: rgb(239, 239, 239);
   position: fixed;
   height: 100%;
   overflow: auto;
+  border-radius: 0px 2px 2px 0px;
 }
 
 /* Sidebar links */

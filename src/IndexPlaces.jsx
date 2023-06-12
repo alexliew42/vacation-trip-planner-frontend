@@ -7,7 +7,7 @@ import { Map, Marker } from "pigeon-maps"
 import "./IndexPlaces.css"
 
 
-export function IndexPlaces (props) {
+export function IndexPlaces () {
 
   const [places, setPlaces] = useState([]);
 
@@ -33,8 +33,8 @@ export function IndexPlaces (props) {
   
   return (
     <div className="IndexPlaces">
-      {console.log(props)}
       <h1>All places</h1>
+      <br/>
       {places.map((place) => (
         <div key={place.id} className="places">
             <div className="place-cards">
