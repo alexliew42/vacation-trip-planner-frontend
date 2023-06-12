@@ -24,7 +24,9 @@ export function Signup() {
 
   return (
     <div className="wrapper">
-        <img id="beach-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXvDCDLiHnoimv7kx72ztSIb5oaF7k6HfLjg&usqp=CAU" />
+        <div id="beach-image">
+
+        </div>
         <h2>Registration</h2>
         <ul>
           {errors.map((error) => (

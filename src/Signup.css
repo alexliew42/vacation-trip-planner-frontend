@@ -88,7 +88,7 @@ form .text h3 a:hover {
 
 #beach-image {
   float: top;
-  width: 100%;
-  height: 100%;
+  height: 250px;
   border-radius: 6px 6px 0px 0px;
+  background-image: url("./assets/beach.jpeg")
 }
