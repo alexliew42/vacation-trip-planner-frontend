@@ -61,6 +61,8 @@ export function IndexPlaces () {
                   <p>Start Time: {place.start_time.slice(0, 10)}</p>
                   <p>End Time: {place.end_time.slice(0, 10)}</p>
                 </div>
+                <hr/>
+                
               </div>
               <div className="map">
                 <Map defaultCenter={[place.lat, place.long]} defaultZoom={11}>

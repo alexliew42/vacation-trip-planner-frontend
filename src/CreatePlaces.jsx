@@ -18,7 +18,7 @@ export function CreatePlaces(props) {
           Name: <input name="name" type="text" />
         </div>
         <div>
-          TripId: <input name="trip_id" type="integer" defaultValue={props.places}/>
+          Trip ID: <input name="trip_id" type="integer" defaultValue={props.places}/>
         </div>
         <div>
           Address: <input name="address" type="text" />
@@ -27,13 +27,13 @@ export function CreatePlaces(props) {
           Image URL: <input name="image_url" type="text" />            
         </div>
         <div>
-          description: <input name="description" type="text" />
+          Description: <input name="description" type="text" />
         </div>
         <div>
-          start_time: <input name="start_time" type="date" />
+          From: <input name="start_time" type="date" />
         </div>
         <div>
-          end_time: <input name="end_time" type="date" />
+          To: <input name="end_time" type="date" />
         </div>
         <button type="submit">Create Place</button>
       </form>

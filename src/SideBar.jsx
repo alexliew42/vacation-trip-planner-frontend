@@ -9,9 +9,9 @@ export function SideBar() {
   if (localStorage.jwt === undefined) {
     // show login/signup
     authenticationLinks = <>
-      <a href="/login">Login</a> 
-      <a href="/signup">Signup</a>
-    </>
+      <a id="login" href="/login">Login</a> 
+      <a id="signup" href="/signup">Signup</a>
+    </> 
   } else {
     // show logout
     authenticationLinks = <LogoutLink />
@@ -24,8 +24,13 @@ export function SideBar() {
         <a href="/trips" className="logo-image">
         </a>
       </div>
+      <div id="travel-city">
+        <b>
+          TravelCity
+        </b>
+      </div>
       <div className="sidebar-content">
-        <a href="/tripsnew">New Trip</a>
+        <a id="new-trip-logo" href="/tripsnew">Plan Trip</a>
         <div className="header-authentication">
           {authenticationLinks}
         </div>

@@ -45,6 +45,45 @@
   background-color: #04AA6D;
 }
 
+#login {
+  background-image: url("./assets/enter.png");
+  background-size: 30px;
+  background-repeat: no-repeat;
+  padding-right: 30px;
+  background-position: 50px 8px;
+  padding-top: 10px;
+}
+
+#signup {
+  background-image: url("./assets/add-user.png");
+  background-size: 25px;
+  background-repeat: no-repeat;
+  padding-right: 30px;
+  background-position: 55px 8px;
+  padding-top: 10px;
+}
+
+#logout {
+  background-image: url("./assets/logout.png");
+  background-size: 30px;
+  background-repeat: no-repeat;
+  padding-right: 30px;
+  background-position: 55px 10px;
+  padding-top: 10px;
+}
+
+#new-trip-logo {
+  background-image: url("./assets/calendar.png");
+  background-size: 30px;
+  background-repeat: no-repeat;
+  padding-right: 30px;
+  background-position: 50px 10px;
+}
+
+#travel-city {
+  text-align: center;
+  font-size: 20px;
+}
 
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
 @media screen and (max-width: 700px) {
