@@ -54,6 +54,15 @@
   padding-top: 10px;
 }
 
+#profile {
+  background-image: url("./assets/user.png");
+  background-size: 25px;
+  background-repeat: no-repeat;
+  padding-right: 30px;
+  background-position: 55px 10px;
+  padding-top: 10px;
+}
+
 #signup {
   background-image: url("./assets/add-user.png");
   background-size: 25px;

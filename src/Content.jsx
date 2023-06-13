@@ -5,6 +5,7 @@ import {LogoutLink} from "./LogoutLink.jsx"
 import {IndexTrips} from "./IndexTrips.jsx"
 import {CreateTrips} from "./CreateTrips.jsx"
 import {IndexPlaces} from "./IndexPlaces.jsx"
+import {UserProfile} from "./UserProfile.jsx"
 import {useState, useEffect} from "react"
 import axios from "axios"
 
@@ -41,6 +42,7 @@ export function Content() {
         <Route path="/trips" element={<IndexTrips trips={trips} />}/>
         <Route path="/tripsnew" element={<CreateTrips onCreateTrip={handleCreateTrip} trips={trips}/>} />
         <Route path="/places" element={<IndexPlaces/>}/>
+        <Route path="/profile" element={<UserProfile/>}/>
       </Routes>
     </div>
   );

@@ -14,7 +14,10 @@ export function SideBar() {
     </> 
   } else {
     // show logout
-    authenticationLinks = <LogoutLink />
+    authenticationLinks = <>
+    <a id="profile" href="/profile">Profile</a>
+    <LogoutLink />
+    </>
   }
 
   
